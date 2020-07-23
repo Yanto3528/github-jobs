@@ -40,32 +40,12 @@ export const JobCardTitle = styled.h2`
   margin-bottom: 12px;
 `;
 
-export const JobCardType = styled.span`
-  display: inline-block;
-  font-weight: bold;
-  font-size: 1.2rem;
-  border: 1px solid ${({ theme }) => theme.body};
-  border-radius: 4px;
-  padding: 6px 8px;
-`;
-
 export const JobCardDetail = styled.div`
   height: 100%;
   align-self: flex-end;
   display: flex;
   align-items: center;
-  div {
-    display: flex;
-    align-items: center;
-    svg {
-      margin-right: 7.5px;
-    }
-  }
   div:first-child {
-    margin-right: 28.5px;
-    color: ${({ theme }) => theme.lightgrey};
-  }
-  div:last-child {
-    color: ${({ theme }) => theme.lightgrey2};
+    margin-right: 27.5px;
   }
 `;
