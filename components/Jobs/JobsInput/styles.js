@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const JobsInputContainer = styled.div`
   flex-basis: 35%;
   margin-right: 32px;
+  @media only screen and (max-width: 918px) {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
 `;
 
 export const CheckboxContainer = styled.div`
@@ -20,6 +24,7 @@ export const CheckboxContainer = styled.div`
 export const LocationContainer = styled.div`
   margin-top: 16px;
   margin-bottom: 25px;
+  width: 100%;
   p {
     font-family: "Poppins", sans-serif;
     font-weight: bold;

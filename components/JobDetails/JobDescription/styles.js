@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const JobDescriptionContainer = styled.div`
+  flex: 1;
+`;
+
 export const JobDescriptionHeader = styled.div`
   display: flex;
   align-items: center;
@@ -18,6 +22,7 @@ export const JobDescriptionBody = styled.div`
     width: 42px;
     height: 42px;
     margin-right: 12px;
+    object-fit: contain;
   }
   h2 {
     font-size: 1.8rem;

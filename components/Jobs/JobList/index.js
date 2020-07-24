@@ -19,6 +19,14 @@ const JobList = () => {
   const indexOfFirstJobs = indexOfLastJobs - jobsPerPage;
   const currentJobs = jobs.slice(indexOfFirstJobs, indexOfLastJobs);
 
+  if (currentJobs.length === 0 && !loading) {
+    return <h1 style={{ margin: "0 auto" }}>No Jobs Found.</h1>;
+  }
+
+  if (error) {
+    return <h1 style={{ margin: "0 auto" }}>{error}</h1>;
+  }
+
   return (
     <JobListContainer>
       {loading && (

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const JobApplyContainer = styled.div`
   font-family: "Poppins", sans-serif;
-  width: 230px;
+  flex-basis: 230px;
   margin-right: 77px;
   word-wrap: break-word;
   div {
@@ -20,5 +20,8 @@ export const JobApplyContainer = styled.div`
     color: ${({ theme }) => theme.lightgrey};
     font-size: 1.4rem;
     margin-bottom: 16px;
+  }
+  @media only screen and (max-width: 740px) {
+    margin-bottom: 36px;
   }
 `;

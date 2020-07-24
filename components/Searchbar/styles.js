@@ -10,6 +10,7 @@ export const SearchbarContainer = styled.section`
   justify-content: center;
   form {
     width: 790px;
+    max-width: 95%;
     position: relative;
     input {
       padding-left: 45px;

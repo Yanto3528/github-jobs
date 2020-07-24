@@ -22,7 +22,7 @@ export const PaginationLink = styled.div`
     border-color: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.primary};
   }
-  &:not(last-child) {
+  &:not(:last-child) {
     margin-right: 12px;
   }
   ${({ active }) =>
@@ -35,5 +35,10 @@ export const PaginationLink = styled.div`
         opacity: 0.9;
         color: white;
       }
-    `}
+    `};
+  @media only screen and (max-width: 570px) {
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+  }
 `;

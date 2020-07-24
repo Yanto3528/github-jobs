@@ -15,4 +15,7 @@ export default styled.button`
   &:hover {
     opacity: 0.9;
   }
+  @media only screen and (max-width: 400px) {
+    padding: 14px 28px;
+  }
 `;

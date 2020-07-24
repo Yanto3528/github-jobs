@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import qs from "qs";
 import { useRouter } from "next/router";
 
 export const JobContext = createContext();
@@ -93,21 +94,30 @@ const tempJobs = [
 ];
 
 const JobProvider = ({ children }) => {
-  const [jobs, setJobs] = useState(tempJobs.concat(tempJobs).concat(tempJobs));
+  const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [jobsPerPage] = useState(5);
 
-  const fetchJobs = async () => {
+  const fetchJobs = async (query = null) => {
+    let params = {};
+    if (query !== null) {
+      params = { ...query };
+    }
     try {
       setLoading(true);
-      const res = await axios.get(
-        "https://cors-anywhere.herokuapp.com/jobs.github.com/positions.json"
-      );
+      const res = await axios({
+        method: "GET",
+        url: "http://localhost:3000/api/jobs",
+        params,
+        // paramsSerializer: (params) => {
+        //   qs.stringify(params, { arrayFormat: "comma" });
+        // },
+      });
       setJobs(res.data);
     } catch (error) {
       console.log(error);
-      setError(error.response.data.message);
+      setError(error);
     } finally {
       setLoading(false);
     }

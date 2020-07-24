@@ -24,3 +24,16 @@ export const JobSubContent = styled.div`
     }
   }};
 `;
+
+export const JobImageNotFound = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: ${({ size }) => (size ? size : "42px")};
+  height: ${({ size }) => (size ? size : "42px")};
+  font-size: ${({ fontSize }) => (fontSize ? fontSize : "0.8rem")};
+  font-weight: 500;
+  margin-right: 12px;
+  background-color: #f2f2f2;
+  color: #bdbdbd;
+`;

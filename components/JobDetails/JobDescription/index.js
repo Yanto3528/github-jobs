@@ -4,8 +4,13 @@ import ReactMarkdown from "react-markdown/with-html";
 import { IoMdGlobe } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 
-import { JobType, JobSubContent } from "../../../styles/shared/Job";
 import {
+  JobType,
+  JobSubContent,
+  JobImageNotFound,
+} from "../../../styles/shared/Job";
+import {
+  JobDescriptionContainer,
   JobDescriptionHeader,
   JobDescriptionBody,
   JobMarkdown,
@@ -13,7 +18,7 @@ import {
 
 const JobDescription = ({ job }) => {
   return (
-    <div>
+    <JobDescriptionContainer>
       <JobDescriptionHeader>
         <h1>{job.title}</h1>
         <JobType>{job.type}</JobType>
@@ -23,7 +28,12 @@ const JobDescription = ({ job }) => {
         {moment(new Date(job.created_at)).fromNow()}
       </JobSubContent>
       <JobDescriptionBody>
-        <img src={job.company_logo} alt={job.company} />
+        {job.company_logo ? (
+          <img src={job.company_logo} alt={job.company} />
+        ) : (
+          <JobImageNotFound>Not found</JobImageNotFound>
+        )}
+
         <div>
           <h2>{job.company}</h2>
           <JobSubContent>
@@ -35,7 +45,7 @@ const JobDescription = ({ job }) => {
       <JobMarkdown>
         <ReactMarkdown source={job.description} escapeHtml={false} />
       </JobMarkdown>
-    </div>
+    </JobDescriptionContainer>
   );
 };
 
