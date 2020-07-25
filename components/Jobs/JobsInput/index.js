@@ -38,65 +38,78 @@ const JobsInput = () => {
     <JobsInputContainer>
       <form onSubmit={handleSubmit(onSubmit)}>
         <CheckboxContainer>
-          <input
-            type="checkbox"
-            name="full_time"
-            id="full_time"
-            onChange={onChecked}
-          />{" "}
-          <span>Full time</span>
+          <label htmlFor="full_time">
+            <input
+              type="checkbox"
+              name="full_time"
+              id="full_time"
+              onChange={onChecked}
+            />{" "}
+            <span>Full time</span>
+          </label>
         </CheckboxContainer>
         <LocationContainer>
           <p>Location</p>
           <div>
             <IoMdGlobe size="1.6rem" />
-            <Input
-              type="text"
-              placeholder="City, state, zip code or country"
-              name="location"
-              ref={register}
-            />
+            <label htmlFor="location">
+              <Input
+                type="text"
+                placeholder="City, state, zip code or country"
+                name="location"
+                id="location"
+                ref={register}
+              />
+            </label>
           </div>
         </LocationContainer>
         <CheckboxContainer>
-          <input
-            type="checkbox"
-            name="london"
-            id="london"
-            onChange={onChecked}
-            checked={params.location === "london"}
-          />{" "}
-          <span>London</span>
+          <label htmlFor="london">
+            <input
+              type="checkbox"
+              name="london"
+              id="london"
+              onChange={onChecked}
+              checked={params.location === "london"}
+            />{" "}
+            <span>London</span>
+          </label>
         </CheckboxContainer>
         <CheckboxContainer>
-          <input
-            type="checkbox"
-            name="amsterdam"
-            id="amsterdam"
-            onChange={onChecked}
-            checked={params.location === "amsterdam"}
-          />{" "}
-          <span>Amsterdam</span>
+          <label htmlFor="amsterdam">
+            <input
+              type="checkbox"
+              name="amsterdam"
+              id="amsterdam"
+              onChange={onChecked}
+              checked={params.location === "amsterdam"}
+            />{" "}
+            <span>Amsterdam</span>
+          </label>
         </CheckboxContainer>
         <CheckboxContainer>
-          <input
-            type="checkbox"
-            name="new+york"
-            id="new+york"
-            onChange={onChecked}
-            checked={params.location === "new+york"}
-          />{" "}
-          <span>New York</span>
+          <label htmlFor="new+york">
+            <input
+              type="checkbox"
+              name="new+york"
+              id="new+york"
+              onChange={onChecked}
+              checked={params.location === "new+york"}
+            />{" "}
+            <span>New York</span>
+          </label>
         </CheckboxContainer>
         <CheckboxContainer>
-          <input
-            type="checkbox"
-            name="berlin"
-            id="berlin"
-            onChange={onChecked}
-            checked={params.location === "berlin"}
-          />{" "}
-          <span>Berlin</span>
+          <label htmlFor="berlin">
+            <input
+              type="checkbox"
+              name="berlin"
+              id="berlin"
+              onChange={onChecked}
+              checked={params.location === "berlin"}
+            />{" "}
+            <span>Berlin</span>
+          </label>
         </CheckboxContainer>
       </form>
     </JobsInputContainer>

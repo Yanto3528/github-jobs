@@ -19,12 +19,15 @@ const Searchbar = () => {
     <SearchbarContainer>
       <form onSubmit={handleSubmit(onSubmit)}>
         <BsBag size="1.6rem" />
-        <Input
-          type="text"
-          name="search"
-          placeholder="Title, companies, expertise or benefits"
-          ref={register}
-        />
+        <label htmlFor="search">
+          <Input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Title, companies, expertise or benefits"
+            ref={register}
+          />
+        </label>
         <Button>Search</Button>
       </form>
     </SearchbarContainer>
