@@ -49,10 +49,10 @@ const JobsInput = () => {
           </label>
         </CheckboxContainer>
         <LocationContainer>
-          <div>
-            <IoMdGlobe size="1.6rem" />
-            <label htmlFor="location">
-              <p>Location</p>
+          <label htmlFor="location">
+            <p>Location</p>
+            <div>
+              <IoMdGlobe size="1.6rem" />
               <Input
                 type="text"
                 placeholder="City, state, zip code or country"
@@ -60,8 +60,8 @@ const JobsInput = () => {
                 id="location"
                 ref={register}
               />
-            </label>
-          </div>
+            </div>
+          </label>
         </LocationContainer>
         <CheckboxContainer>
           <label htmlFor="london">
