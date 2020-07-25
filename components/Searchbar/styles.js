@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SearchbarContainer = styled.section`
   height: 138px;
-  background-image: url("/backgroundImg.png");
+  background-image: url("/backgroundImg.jpg");
   background-position: center;
   background-size: cover;
   display: flex;

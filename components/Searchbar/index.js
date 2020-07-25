@@ -27,8 +27,8 @@ const Searchbar = () => {
             placeholder="Title, companies, expertise or benefits"
             ref={register}
           />
+          <Button>Search</Button>
         </label>
-        <Button>Search</Button>
       </form>
     </SearchbarContainer>
   );

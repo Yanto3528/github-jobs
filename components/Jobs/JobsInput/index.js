@@ -49,10 +49,10 @@ const JobsInput = () => {
           </label>
         </CheckboxContainer>
         <LocationContainer>
-          <p>Location</p>
           <div>
             <IoMdGlobe size="1.6rem" />
             <label htmlFor="location">
+              <p>Location</p>
               <Input
                 type="text"
                 placeholder="City, state, zip code or country"
